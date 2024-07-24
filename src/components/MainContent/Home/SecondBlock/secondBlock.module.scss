@@ -1,0 +1,34 @@
+.section {
+    .ul {
+        .li {
+            display: grid;
+            align-items: center;
+            grid-template-areas:
+                'icon title title'
+                'description description description'
+                'catalog catalog catalog';
+            gap: 10px;
+            height: 374px;
+
+            .icon {
+                grid-area: icon;
+
+            }
+
+            .title {
+                grid-area: title;
+
+            }
+
+            .description {
+                grid-area: description;
+
+            }
+
+            .catalog {
+                grid-area: catalog;
+
+            }
+        }
+    }
+}
