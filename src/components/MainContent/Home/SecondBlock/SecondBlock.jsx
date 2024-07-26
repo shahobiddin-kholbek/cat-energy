@@ -3,6 +3,7 @@ import WeightGain from "../../../ui/icons/weight_gain";
 import WeightLossIcon from "../../../ui/icons/weight_loss_icon";
 import Arrow from "../../../ui/icons/Arrow";
 import styles from "./secondBlock.module.scss";
+import { PAGES_URLS } from "../../../../config/urls.config";
 
 const weightLossGainDataes = [
   {
@@ -33,11 +34,22 @@ export default function SecondBlock() {
             key={item.id}
           >
             <div className={`${styles.icon}`}>{item.icon}</div>
-            <h1 className={`${styles.title} text-[36px] leading-[36px] font-normal`}>{item.title}</h1>
-            <p className={`${styles.description} w-[467px] font-sans`}>{item.description}</p>
+            <h1
+              className={`${styles.title} text-[36px] leading-[36px] font-normal`}
+            >
+              {item.title}
+            </h1>
+            <p className={`${styles.description} w-[467px] font-sans`}>
+              {item.description}
+            </p>
             <Link
-              to={"/"}
-              className={`${styles.catalog} flex h-[38px] items-center py-[4px] gap-[25px] group`}
+              to={PAGES_URLS.PRODUCTS}
+              onClick={() => {
+                item.id === 1
+                  ? window.scrollTo(0, 750)
+                  : window.scrollTo(0, 0);
+              }}
+              className={`${styles.catalog} w-[165px] hover:border-b hover:border-b-black flex h-[38px] items-center py-[4px] gap-[25px] group`}
             >
               <p
                 className={`text-[20px] text-black whitespace-nowrap uppercase leading-[29.64px] font-normal`}

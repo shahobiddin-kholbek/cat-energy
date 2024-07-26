@@ -1,7 +1,21 @@
-// eslint-disable-next-line react/prop-types
-export default function Info({ selectedOption, setSelectedOption }) {
+import PropTypes from "prop-types";
+
+export default function Info({ petInfo, setPetInfo }) {
+  const { name, weight, age, selectedOption } = petInfo;
+
   const handleOptionChange = (event) => {
-    setSelectedOption(event.target.id);
+    const { id, value, type } = event.target;
+    if (type === "radio") {
+      setPetInfo({
+        ...petInfo,
+        selectedOption: id,
+      });
+    } else {
+      setPetInfo({
+        ...petInfo,
+        [id]: value,
+      });
+    }
   };
 
   return (
@@ -14,7 +28,10 @@ export default function Info({ selectedOption, setSelectedOption }) {
           <input
             className="w-full h-[52px] border border-[#E7E7E7] pl-[13px] outline-none"
             type="text"
+            value={name}
+            onChange={handleOptionChange}
             required
+            name="name"
             id="name"
             placeholder="Имя"
           />
@@ -26,6 +43,9 @@ export default function Info({ selectedOption, setSelectedOption }) {
           <input
             className="w-full h-[52px] border border-[#E7E7E7] pl-[13px] outline-none"
             type="number"
+            name="weight"
+            value={weight}
+            onChange={handleOptionChange}
             required
             id="weight"
             placeholder="Вес"
@@ -37,44 +57,47 @@ export default function Info({ selectedOption, setSelectedOption }) {
           </p>
           <input
             className="w-full h-[52px] border border-[#E7E7E7] pl-[13px] outline-none"
-            type="text"
+            type="number"
+            name="age"
+            value={age}
+            onChange={handleOptionChange}
             id="age"
             placeholder="Возраст"
           />
         </label>
       </div>
       <div className="border flex flex-col gap-[13px] pt-[25px] pl-[28px] border-[#E7E7E7] ">
-        <label className="flex items-center gap-[13px]" htmlFor="weight_loss">
+        <label className="flex items-center gap-[13px]" htmlFor="Похудение">
           <input
-            checked={selectedOption === "weight_loss"}
+            checked={selectedOption === "Похудение"}
             onChange={handleOptionChange}
             type="radio"
             name="goal"
-            id="weight_loss"
+            id="Похудение"
           />
           <p className="uppercase text-[20px] leading-[30px] font-normal text-[#222222]">
             похудение
           </p>
         </label>
-        <label className="flex items-center gap-[13px]" htmlFor="weight_gain">
+        <label className="flex items-center gap-[13px]" htmlFor="Набор массы">
           <input
             type="radio"
-            checked={selectedOption === "weight_gain"}
+            checked={selectedOption === "Набор массы"}
             onChange={handleOptionChange}
             name="goal"
-            id="weight_gain"
+            id="Набор массы"
           />
           <p className="uppercase text-[20px] leading-[30px] font-normal text-[#222222]">
             Набор массы
           </p>
         </label>
-        <label className="flex items-center gap-[13px]" htmlFor="need_advice">
+        <label className="flex items-center gap-[13px]" htmlFor="Не знаю">
           <input
             type="radio"
-            checked={selectedOption === "need_advice"}
+            checked={selectedOption === "Не знаю"}
             onChange={handleOptionChange}
             name="goal"
-            id="need_advice"
+            id="Не знаю"
           />
           <p className="uppercase text-[20px] leading-[30px] font-normal text-[#222222]">
             Не знаю (Нужен ваш совет)
@@ -84,3 +107,12 @@ export default function Info({ selectedOption, setSelectedOption }) {
     </div>
   );
 }
+Info.propTypes = {
+  petInfo: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    weight: PropTypes.string.isRequired,
+    age: PropTypes.string,
+    selectedOption: PropTypes.string.isRequired,
+  }).isRequired,
+  setPetInfo: PropTypes.func.isRequired,
+};

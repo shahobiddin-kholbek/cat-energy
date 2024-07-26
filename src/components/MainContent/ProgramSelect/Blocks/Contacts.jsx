@@ -1,37 +1,70 @@
+import PropTypes from 'prop-types';
+import CaptionInLine from "../../../ui/icons/CaptioninLine/CaptioninLine";
 import EmailIcon from "../../../ui/icons/EmailIcon";
 import PhoneIcon from "../../../ui/icons/PhoneIcon";
 
-export default function Contacts() {
+Contacts.propTypes = {
+  contacts: PropTypes.shape({
+    email: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+  }).isRequired,
+  setContacts: PropTypes.func.isRequired,
+};
+
+export default function Contacts({ contacts, setContacts }) {
+  const { email, phone } = contacts;
+
+  const onChangeContacts = (e) => {
+    const { name, value } = e.target;
+    setContacts((prev) => ({ ...prev, [name]: value }));
+  };
+
   return (
     <div className="pb-[67px]">
-      <div className="relative pb-[76px]">
-        <hr className="border-[2px] border-[#68B738] w-full" />
-        <h1 className="text-[36px] whitespace-nowrap absolute top-[-40px] px-[40px] left-[110px] bg-white leading-[36px] font-400 text-black mt-[20px]">
-          Контактные данные (владельца кота)
-        </h1>
-      </div>
-      <div className="px-[110px] grid grid-cols-2 gap-[78px]">
-        <label htmlFor="email" className="relative flex items-center gap-[13px] ">
-            <p className="uppercase whitespace-nowrap text-[20px] leading-[30px] font-normal text-[#444444]">E-mail:*</p>
+      <CaptionInLine caption="Контактные данные (владельца кота)" />
+      <div className="px-[110px] pt-[76px] grid grid-cols-2 gap-[78px]">
+        <label
+          htmlFor="email"
+          className="relative flex items-center gap-[13px] "
+        >
+          <p className="uppercase whitespace-nowrap text-[20px] leading-[30px] font-normal text-[#444444]">
+            E-mail:*
+          </p>
           <input
             type="email"
+            value={email}
+            onChange={onChangeContacts}
             id="email"
+            name="email"
             placeholder="Email"
             className="w-full text-[#444444] uppercase text-[20px] leading-[30px] pr-[25px] h-[52px] border border-[#E7E7E7] pl-[13px] outline-none"
           />
-          <span className="absolute  right-[19.72px]"><EmailIcon /></span>
+          <span className="absolute  right-[19.72px]">
+            <EmailIcon />
+          </span>
         </label>
-        <label htmlFor="phone" className="relative flex items-center gap-[13px] ">
-            <p className="uppercase whitespace-nowrap text-[20px] leading-[30px] font-normal text-[#444444]">Телефон:*</p>
+        <label
+          htmlFor="phone"
+          className="relative flex items-center gap-[13px] "
+        >
+          <p className="uppercase whitespace-nowrap text-[20px] leading-[30px] font-normal text-[#444444]">
+            Телефон:*
+          </p>
           <input
             type="phone"
+            value={phone}
+            onChange={onChangeContacts}
             id="phone"
+            name="phone"
             placeholder="Phone"
             className="w-full text-[#444444] uppercase text-[20px] leading-[30px] pr-[25px] h-[52px] border border-[#E7E7E7] pl-[13px] outline-none"
           />
-          <span className="absolute  right-[19.72px]"><PhoneIcon /></span>
+          <span className="absolute  right-[19.72px]">
+            <PhoneIcon />
+          </span>
         </label>
       </div>
     </div>
   );
 }
+

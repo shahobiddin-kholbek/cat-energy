@@ -9,6 +9,7 @@ export default function LogoDesctop() {
         height="59"
         viewBox="0 0 202 59"
         fill="none"
+        className={`hover:scale-105 transition-transform duration-200`}
         xmlns="http://www.w3.org/2000/svg"
       >
         <g clipPath="url(#clip0_2403_439)">

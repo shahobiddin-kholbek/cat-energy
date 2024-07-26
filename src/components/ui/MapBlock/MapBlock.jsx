@@ -26,8 +26,8 @@ export default function MapBlock() {
       <img src={mapFoto} alt="map" />
       <img
         onClick={() => setShowAddress(true)}
-        className={`hover:transform ${
-          showAddress ? "scale-100" : "scale-95"
+        className={`hover:transform transition-transform duration-200 ${
+          showAddress ? "scale-100" : "scale-90"
         } addressBlock hover:cursor-pointer absolute top-[33%] right-[29%]`}
         src={mark}
         alt="mark"
@@ -35,7 +35,7 @@ export default function MapBlock() {
       {showAddress && (
         <div
           ref={addressRef}
-          className="absolute addressBlock w-[570px] h-[201px] bg-white top-[27%] left-[7%] flex items-center justify-center"
+          className="absolute shadow-lg addressBlock w-[570px] h-[201px] bg-white top-[27%] left-[7%] flex items-center justify-center"
         >
           <div className="flex items-center justify-center gap-[87px]">
             <p className="text-black w-[163px] uppercase font-normal text-[20px] leading-[21px]">

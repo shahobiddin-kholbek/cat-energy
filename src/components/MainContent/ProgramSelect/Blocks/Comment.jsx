@@ -1,14 +1,14 @@
-export default function Comment() {
+import PropTypes from "prop-types";
+import CaptionInLine from "../../../ui/icons/CaptioninLine/CaptioninLine";
+
+export default function Comment({ comment, setComment }) {
   return (
     <div className="pb-[67px]">
-      <div className="relative pb-[69px]">
-        <hr className="border-[2px] border-[#68B738] w-full" />
-        <h1 className="text-[36px] whitespace-nowrap absolute top-[-40px] px-[40px] left-[110px] bg-white leading-[36px] font-400 text-black mt-[20px]">
-          Комментарий
-        </h1>
-      </div>
-      <div className="px-[110px]">
+      <CaptionInLine caption="Комментарии" />
+      <div className="pt-[69px] px-[110px]">
         <textarea
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
           name="comment"
           id="comment"
           placeholder="Расскажите обо всех повадках кота"
@@ -18,3 +18,8 @@ export default function Comment() {
     </div>
   );
 }
+
+Comment.propTypes = {
+  comment: PropTypes.string,
+  setComment: PropTypes.func,
+};

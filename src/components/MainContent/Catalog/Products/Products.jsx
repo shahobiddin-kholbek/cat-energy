@@ -1,12 +1,17 @@
 import { useState } from "react";
-import { dataes } from "../../../../dataes";
+import { dataes as products } from "../../../../dataes";
+import PlusIcon from "../../../ui/icons/PlusIcon";
 export default function Products() {
   const [productHovered, setProductHovered] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+
+
+  const isAll = showAll ? products : products.slice(0, 7);
 
   return (
     <section>
       <ul className="grid grid-cols-4 gap-[80px] w-full">
-        {dataes.map((item) => (
+        {isAll.map((item) => (
           <li
             key={item.id}
             onMouseEnter={() => setProductHovered(item.id)}
@@ -15,7 +20,7 @@ export default function Products() {
           >
             <div className="px-[35px] mt-[-50px] mb-[33px]">
               <img
-                className={`mb-[42px] ${
+                className={`mb-[42px] transition-transform duration-300 ${
                   productHovered === item.id ? "scale-110" : "scale-90"
                 }`}
                 src={item.img}
@@ -34,7 +39,9 @@ export default function Products() {
                     className="flex justify-between gap-[5.52px] pb-[9.36px] border-b-[#CDCDCD] border-b "
                   >
                     <p>{item.label}</p>
-                    <p>{item.value} {i === 2 && 'Р.'}</p>
+                    <p>
+                      {item.value} {i === 2 && "Р."}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -46,6 +53,18 @@ export default function Products() {
             </div>
           </li>
         ))}
+        <div className="float-right border-2 flex flex-col justify-center items-center border-[#F2F2F2]">
+          <PlusIcon />
+          <h1 className="text-center text-[20px] mt-[49px] mb-[23px] text-[#111111] leading-[22px] w-[134px] uppercase">
+            Показать еще 100500 товаров
+          </h1>
+          <p className="text-[#444444] text-base leading-[18px] text-center w-[167px]">
+            На самом деле вкусов гораздо больше!
+          </p>
+          <button onClick={() => setShowAll((prev) => !prev)} className="bg-[#F2F2F2] hover:opacity-90 py-[20px] uppercase text-[16px] mt-[87px] leading-[20px] text-[#444444] w-[169px]">
+            {showAll ? "Показать меньше" : "Показать все"}
+          </button>
+        </div>
       </ul>
     </section>
   );

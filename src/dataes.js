@@ -75,6 +75,26 @@ export const dataes = [
             { label: 'Цена', value: 700 }
         ],
     },
+    {
+        id: 8,
+        img: food,
+        title: "Cat Energy PRO 500 г",
+        info: [
+            { label: 'Масса', value: '500 г' },
+            { label: 'Вкус', value: 'Сыр' },
+            { label: 'Цена', value: 700 }
+        ],
+    },
+    {
+        id: 9,
+        img: food2,
+        title: "Cat Energy PRO 1000 г",
+        info: [
+            { label: 'Масса', value: '1000 г' },
+            { label: 'Вкус', value: 'Панир' },
+            { label: 'Цена', value: 1100 }
+        ],
+    },
 
 ]
 

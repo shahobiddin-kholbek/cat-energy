@@ -10,7 +10,7 @@ export default function FooterCP() {
       <MapBlock />
       <div className="bg-[#F2F2F2] w-full border h-[149px] px-[110px] flex justify-center items-center">
         <div className="flex w-full h-[34px] justify-between items-center">
-          <FootLogoDesk />
+          <FootLogoDesk  />
           <div className="flex gap-[27px] items-center">
             <Link to="/#" target="_blank" className="hover:opacity-80">
               <VK_icon />

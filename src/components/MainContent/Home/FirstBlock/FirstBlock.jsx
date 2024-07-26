@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import catBg from "../../../../assets/cat_bg_desk.png";
 import indexCan from "../../../../assets/img/index-can.png";
+import { Link } from "react-router-dom";
+import { PAGES_URLS } from "../../../../config/urls.config";
 
 export default function FirstBlock() {
   const [showRollton, setShowRollton] = useState(false);
@@ -22,11 +24,11 @@ export default function FirstBlock() {
           <p className="uppercase text-[20px] mb-[52px] leading-[20px] text-black">
             Занялся собой? Займись котом!
           </p>
-          <div className="">
-            <button className="uppercase whitespace-nowrap hover:opacity-90   bg-[#68B738] py-[14px] px-[26px] text-[20px] leading-[20px] text-white">
+          <Link to={PAGES_URLS.PROGRAM_SELECTION} onClick={() => window.scrollTo(0, 0)} className="">
+            <button className="uppercase whitespace-nowrap hover:opacity-90 bg-[#68B738] py-[14px] px-[26px] text-[20px] leading-[20px] text-white">
               Подобрать программу
             </button>
-          </div>
+          </Link>
         </div>
         <div className="absolute top-[141px] z-20  -right-[38.7%]  w-full ">
           {showRollton && <img className="max-w-[552px] " src={indexCan} alt="indexCan" />}
