@@ -54,7 +54,7 @@ export default function ProgramSelect() {
 
   return (
     <section className="pt-[187px] pb-[82px]">
-      <div className="px-[110px]">
+      <div className="px-[110px] md:px-[70px]">
         <h1 className="pb-[56px] text-[60px] leading-[60px] font-normal text-black">
           Подбор программы
         </h1>
@@ -67,7 +67,7 @@ export default function ProgramSelect() {
         <Contacts contacts={contacts} setContacts={setContacts} />
         <Comment comment={comment} setComment={setComment} />
         <Additionally additional={additional} setAdditional={setAdditional} />
-        <div className="grid grid-cols-2 items-center gap-[81px] px-[110px]">
+        <div className="grid grid-cols-2 items-center gap-[81px] px-[110px] md:px-[70px]">
           <button className="uppercase py-[14px] hover:opacity-90 text-white bg-[#68B738]">
             отправить заявку
           </button>

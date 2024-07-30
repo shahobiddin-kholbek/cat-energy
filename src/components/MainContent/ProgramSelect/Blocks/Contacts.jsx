@@ -22,7 +22,7 @@ export default function Contacts({ contacts, setContacts }) {
   return (
     <div className="pb-[67px]">
       <CaptionInLine caption="Контактные данные (владельца кота)" />
-      <div className="px-[110px] pt-[76px] grid grid-cols-2 gap-[78px]">
+      <div className="px-[110px] md:px-[71px] pt-[76px] grid grid-cols-2 md:grid-cols-1 gap-[78px] md:gap-[20px]">
         <label
           htmlFor="email"
           className="relative flex items-center gap-[13px] "

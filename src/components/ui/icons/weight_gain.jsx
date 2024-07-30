@@ -3,6 +3,7 @@ export default function WeightGain() {
     <svg
       width="134"
       height="100"
+       className="w-[134px] h-[100px] md:w-[268px] md:h-[200px]"
       viewBox="0 0 134 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

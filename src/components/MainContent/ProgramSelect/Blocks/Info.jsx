@@ -19,7 +19,7 @@ export default function Info({ petInfo, setPetInfo }) {
   };
 
   return (
-    <div className="pb-[69px] px-[110px] grid grid-cols-2 gap-[80px]">
+    <div className="pb-[69px] px-[110px] md:px-[71px] grid grid-cols-2 md:grid-cols-1 gap-[80px]">
       <div className="flex flex-col gap-[20px]">
         <label className="flex items-center gap-[13px]" htmlFor="name">
           <p className="uppercase whitespace-nowrap text-[20px] leading-[30px] font-normal text-black">

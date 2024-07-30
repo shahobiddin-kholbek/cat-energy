@@ -26,11 +26,11 @@ const weightLossGainDataes = [
 
 export default function SecondBlock() {
   return (
-    <section className={`${styles.section} px-[110px] mt-[82px]`}>
-      <ul className={`${styles.ul} flex justify-between gap-[80px]`}>
+    <section className={`${styles.section} px-[110px] md:px-[30px] mt-[82px] md:mt-[140px]`}>
+      <ul className={`${styles.ul} flex md:flex-col justify-between gap-[80px] md:gap-[30px]`}>
         {weightLossGainDataes.map((item) => (
           <li
-            className={`${styles.li} pt-[41px] pb-[55px] px-[52px] bg-[#F2F2F2] h-[374px]`}
+            className={`${styles.li} pt-[41px] pb-[55px] md:pb-[53px] px-[52px] bg-[#F2F2F2] h-[374px]`}
             key={item.id}
           >
             <div className={`${styles.icon}`}>{item.icon}</div>
@@ -39,7 +39,7 @@ export default function SecondBlock() {
             >
               {item.title}
             </h1>
-            <p className={`${styles.description} w-[467px] font-sans`}>
+            <p className={`${styles.description} w-[467px] md:w-[340px]  font-sans`}>
               {item.description}
             </p>
             <Link

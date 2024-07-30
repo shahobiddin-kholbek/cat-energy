@@ -8,7 +8,7 @@ export default function FooterCP() {
   return (
     <footer className="flex flex-col">
       <MapBlock />
-      <div className="bg-[#F2F2F2] w-full border h-[149px] px-[110px] flex justify-center items-center">
+      <div className="bg-[#F2F2F2] w-full border h-[149px] lg:px-[110px] md:px-[30px] flex justify-center items-center">
         <div className="flex w-full h-[34px] justify-between items-center">
           <FootLogoDesk  />
           <div className="flex gap-[27px] items-center">
@@ -22,7 +22,7 @@ export default function FooterCP() {
               <FB_icon />
             </Link>
           </div>
-          <p className="text-[#666666] font-normal leading-[18.2px]">
+          <p className="text-[#666666] font-normal ">
             © 2024 Cat Energy. All Rights Reserved
           </p>
         </div>

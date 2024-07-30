@@ -1,0 +1,47 @@
+section {
+    div {
+        ul {
+            li {
+                display: grid;
+                align-items: center;
+                width: 100%;
+                grid-template-areas:
+                    'label label label type type price button button button'
+                ;
+                grid-template-columns: repeat(3, 1fr) 2fr 1fr 2fr repeat(3, 1fr); 
+                
+                h1 {
+                    grid-area: label;
+                }
+
+                .type {
+                    grid-area: type;
+                }
+ 
+                .price {
+                    grid-area: price;
+                }
+
+                button {
+                    grid-area: button;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        div {
+            ul {
+                li {
+                    grid-template-areas: 
+                        'label label label type type price'
+                        'button button button button button button';
+                    grid-template-columns: 2fr 2fr 2fr 2fr 1fr 1fr;
+                    gap: 21px;
+                }
+            }
+        }
+    } 
+}

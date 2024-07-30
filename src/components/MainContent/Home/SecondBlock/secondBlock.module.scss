@@ -32,3 +32,16 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .section {
+        .ul {
+            .li {
+                grid-template-areas:
+                    'title icon icon'
+                    'description icon icon'
+                    'catalog icon icon';
+            }
+        }
+    }
+}

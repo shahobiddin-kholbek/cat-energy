@@ -21,7 +21,7 @@ export default function Additionally({ additional, setAdditional }) {
   return (
     <div className="pb-[61px]">
       <CaptionInLine caption="Дополнительно" />
-      <ul className="px-[110px] pt-[57px] flex justify-between gap-[20px]">
+      <ul className="px-[110px] md:px-[70px] pt-[57px] grid grid-cols-4 md:grid-cols-2 gap-[20px]">
         {checks.map((item) => (
           <li className="flex gap-[19px] items-center" key={item.id}>
             <input

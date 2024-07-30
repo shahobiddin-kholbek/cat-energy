@@ -31,11 +31,11 @@ const dataes = [
 ];
 export default function ThirdBlock() {
   return (
-    <section className="px-[110px] mt-[71px]">
+    <section className="px-[110px] md:px-[30px] mt-[71px]">
       <h1 className="uppercase mb-[32px] text-[60px] leading-[60px] font-normal whitespace-nowrap">
         Как это работает
       </h1>
-      <ul className="flex gap-[79px] justify-between w-full">
+      <ul className="flex gap-[79px] md:flex-wrap md:pr-[81px] justify-between w-full">
         {dataes.map((item) => (
           <li className="relative max-w-[250px] flex gap-[38px]  " key={item.id}>
             <div className="pt-[40px]">{item.icon}</div>

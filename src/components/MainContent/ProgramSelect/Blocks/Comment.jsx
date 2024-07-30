@@ -5,7 +5,7 @@ export default function Comment({ comment, setComment }) {
   return (
     <div className="pb-[67px]">
       <CaptionInLine caption="Комментарии" />
-      <div className="pt-[69px] px-[110px]">
+      <div className="pt-[69px] px-[110px] md:px-[70px]">
         <textarea
           value={comment}
           onChange={(e) => setComment(e.target.value)}
