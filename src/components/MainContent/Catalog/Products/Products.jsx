@@ -1,13 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { dataes as products } from "../../../../dataes";
 import PlusIcon from "../../../ui/icons/PlusIcon";
+import { useLocation } from "react-router-dom";
 export default function Products() {
   const [productHovered, setProductHovered] = useState(null);
   const [showAll, setShowAll] = useState(false);
+  const location = useLocation();
 
   const isAll = showAll ? products : products.slice(0, 7);
 
   const productsExeptAll = products?.slice(7).length;
+
+  useEffect(() => {
+    const hash = location.hash;
+    console.log(hash);
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   return (
     <section className="">
@@ -19,9 +32,10 @@ export default function Products() {
             onMouseLeave={() => setProductHovered(null)}
             className="relative xs:border-b xs:border-[#EBEBEB] bg-[#F2F2F2] xs:bg-white pb-[40px] flex flex-col justify-center cursor-pointer"
           >
-            <div className="px-[35px] xs:pt-[11px] xs:flex mt-[-50px] xs:mt-0 mb-[33px]">
-              <div className="w-full xs:w-1/2 flex justify-center xs:justify-start">
+            <div className="px-[35px]  xs:pt-[11px] xs:flex mt-[-50px] xs:mt-0 mb-[33px]">
+              <div id={item.categoty === "Slim" ? "slim-block" : "pro-block"} className="w-full xs:w-1/2 flex justify-center xs:justify-start">
                 <img
+                  
                   className={`mb-[42px] xs:mb-0 xs:py-[13px] transition-transform duration-300 ${
                     productHovered === item.id
                       ? "scale-110 xs:scale-90"
@@ -31,7 +45,7 @@ export default function Products() {
                   alt={item.title}
                 />
               </div>
-              <div className="flex w-1/2 flex-col">
+              <div className="flex xs:w-1/2 flex-col">
                 <div className="mb-[21.58px] xs:mb-[16px] flex justify-center xs:justify-start text-center xs:text-start w-full">
                   <h1 className="text-[20px] uppercase w-[145px] xs:w-[76px] xs:text-[16px] leading-[21px] text-[#222222] font-normal">
                     {item.title}

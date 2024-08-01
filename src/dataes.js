@@ -14,6 +14,7 @@ export const dataes = [
             { label: 'Вкус', value: 'Курица' },
             { label: 'Цена', value: 700 }
         ],
+        categoty: 'Pro',
     },
     {
         id: 2,
@@ -24,6 +25,8 @@ export const dataes = [
             { label: 'Вкус', value: 'Курица' },
             { label: 'Цена', value: 1000 }
         ],
+        categoty: 'Pro',
+
     },
     {
         id: 3,
@@ -34,6 +37,8 @@ export const dataes = [
             { label: 'Вкус', value: 'Рыба' },
             { label: 'Цена', value: 700 }
         ],
+        categoty: 'Pro',
+
     },
     {
         id: 4,
@@ -44,36 +49,8 @@ export const dataes = [
             { label: 'Вкус', value: 'Рыба' },
             { label: 'Цена', value: 1000 }
         ],
-    },
-    {
-        id: 5,
-        img: food3,
-        title: "Cat Energy SLIM 500 г",
-        info: [
-            { value: '500 г', label: 'Масса' },
-            { label: 'Вкус', value: 'Гречка' },
-            { label: 'Цена', value: 700 }
-        ],
-    },
-    {
-        id: 6,
-        img: food3,
-        title: "Cat Energy SLIM 1000 г",
-        info: [
-            { value: '1000 г', label: 'Масса' },
-            { label: 'Вкус', value: 'Гречка' },
-            { label: 'Цена', value: 1000 }
-        ],
-    },
-    {
-        id: 7,
-        img: food4,
-        title: "Cat Energy SLIM 500 г",
-        info: [
-            { value: '500 г', label: 'Масса' },
-            { label: 'Вкус', value: 'Рис' },
-            { label: 'Цена', value: 700 }
-        ],
+        categoty: 'Pro',
+
     },
     {
         id: 8,
@@ -84,6 +61,8 @@ export const dataes = [
             { label: 'Вкус', value: 'Сыр' },
             { label: 'Цена', value: 700 }
         ],
+        categoty: 'Pro',
+
     },
     {
         id: 9,
@@ -94,7 +73,46 @@ export const dataes = [
             { label: 'Вкус', value: 'Панир' },
             { label: 'Цена', value: 1100 }
         ],
+        categoty: 'Pro',
+
     },
+    {
+        id: 5,
+        img: food3,
+        title: "Cat Energy SLIM 500 г",
+        info: [
+            { value: '500 г', label: 'Масса' },
+            { label: 'Вкус', value: 'Гречка' },
+            { label: 'Цена', value: 700 }
+        ],
+        categoty: 'Slim',
+
+    },
+    {
+        id: 6,
+        img: food3,
+        title: "Cat Energy SLIM 1000 г",
+        info: [
+            { value: '1000 г', label: 'Масса' },
+            { label: 'Вкус', value: 'Гречка' },
+            { label: 'Цена', value: 1000 }
+        ],
+        categoty: 'Slim',
+
+    },
+    {
+        id: 7,
+        img: food4,
+        title: "Cat Energy SLIM 500 г",
+        info: [
+            { value: '500 г', label: 'Масса' },
+            { label: 'Вкус', value: 'Рис' },
+            { label: 'Цена', value: 700 }
+        ],
+        categoty: 'Slim',
+
+    },
+
 
 ]
 

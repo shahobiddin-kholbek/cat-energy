@@ -8,7 +8,6 @@
                 'description description description'
                 'catalog catalog catalog';
             gap: 10px;
-            // height: 374px;
 
             .icon {
                 grid-area: icon;
@@ -27,7 +26,6 @@
 
             .catalog {
                 grid-area: catalog;
-
             }
         }
     }

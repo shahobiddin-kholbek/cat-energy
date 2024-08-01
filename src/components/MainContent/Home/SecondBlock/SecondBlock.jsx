@@ -24,11 +24,14 @@ const weightLossGainDataes = [
   },
 ];
 
-
 export default function SecondBlock() {
   return (
-    <section className={`${styles.section} px-[110px] md:px-[30px] xs:px-[20px] mt-[82px] xs:mt-[22px] md:mt-[140px]`}>
-      <ul className={`${styles.ul} flex md:flex-col xs:flex-col justify-between gap-[80px] md:gap-[30px] xs:gap-[20px]`}>
+    <section
+      className={`${styles.section} px-[110px] md:px-[30px] xs:px-[20px] mt-[82px] xs:mt-[22px] md:mt-[140px]`}
+    >
+      <ul
+        className={`${styles.ul} flex md:flex-col xs:flex-col justify-between gap-[80px] md:gap-[30px] xs:gap-[20px]`}
+      >
         {weightLossGainDataes.map((item) => (
           <li
             className={`${styles.li} pt-[41px] xs:pt-[21px] pb-[55px] xs:pb-[18px] md:pb-[53px] px-[52px] xs:px-[20px] bg-[#F2F2F2] h-[374px] xs:h-auto`}
@@ -40,16 +43,15 @@ export default function SecondBlock() {
             >
               {item.title}
             </h1>
-            <p className={`${styles.description} w-[467px] text-[#444444] xs:text-[14px] xs:w-auto md:w-[340px] font-sans`}>
+            <p
+              className={`${styles.description} w-[467px] text-[#444444] xs:text-[14px] xs:w-auto md:w-[340px] font-sans`}
+            >
               {item.description}
             </p>
             <Link
-              to={PAGES_URLS.PRODUCTS}
-              onClick={() => {
-                item.id === 1
-                  ? window.scrollTo(0, 750)
-                  : window.scrollTo(0, 0);
-              }}
+              to={`${PAGES_URLS.PRODUCTS}#${
+                item.id === 1 ? "slim-block" : "pro-block"
+              }`}
               className={`${styles.catalog} w-[165px] hover:border-b hover:border-b-black flex h-[38px] items-center py-[4px] gap-[25px] group`}
             >
               <p
