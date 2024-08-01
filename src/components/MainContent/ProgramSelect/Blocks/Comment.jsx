@@ -3,9 +3,9 @@ import CaptionInLine from "../../../ui/icons/CaptioninLine/CaptioninLine";
 
 export default function Comment({ comment, setComment }) {
   return (
-    <div className="pb-[67px]">
+    <div className="pb-[67px] xs:pb-[23px]">
       <CaptionInLine caption="Комментарии" />
-      <div className="pt-[69px] px-[110px] md:px-[70px]">
+      <div className="pt-[69px] xs:pt-[37px] px-[110px] xs:px-[20px] md:px-[70px]">
         <textarea
           value={comment}
           onChange={(e) => setComment(e.target.value)}

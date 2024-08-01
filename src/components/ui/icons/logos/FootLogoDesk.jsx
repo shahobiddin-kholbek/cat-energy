@@ -6,7 +6,7 @@ export default function FootLogoDesk() {
       viewBox="0 0 128 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="cursor-pointer hover:scale-105 transition-transform duration-200"
+      className=" cursor-pointer hover:scale-105 transition-transform duration-200"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
       <g clipPath="url(#clip0_2403_695)">

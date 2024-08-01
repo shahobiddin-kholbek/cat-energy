@@ -3,7 +3,7 @@ export default function WeightLossIcon() {
   return (
     <svg
       // width="100"
-      className="w-[100px] h-[106px] md:w-[206px] md:h-[211px]"
+      className="w-[100px] h-[106px] md:w-[206px] md:h-[211px] xs:w-[50px] xs:h-[53px]"
       // height="106"
       viewBox="0 0 100 106"
       fill="none"

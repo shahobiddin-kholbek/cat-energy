@@ -1,9 +1,6 @@
-import { Link } from "react-router-dom";
-import { PAGES_URLS } from "../../../../config/urls.config";
 
 export default function LogoDesctop() {
   return (
-    <Link to={PAGES_URLS.MAIN}>
       <svg
         width="202"
         height="59"
@@ -144,6 +141,5 @@ export default function LogoDesctop() {
           </clipPath>
         </defs>
       </svg>
-    </Link>
   );
 }

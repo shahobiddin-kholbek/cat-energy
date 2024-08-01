@@ -20,9 +20,9 @@ export default function Contacts({ contacts, setContacts }) {
   };
 
   return (
-    <div className="pb-[67px]">
+    <div className="pb-[67px] xs:pb-[23px] xs:pt-[26px]">
       <CaptionInLine caption="Контактные данные (владельца кота)" />
-      <div className="px-[110px] md:px-[71px] pt-[76px] grid grid-cols-2 md:grid-cols-1 gap-[78px] md:gap-[20px]">
+      <div className="px-[110px] xs:px-[20px] md:px-[71px] pt-[76px] xs:pt-[35px] grid grid-cols-2 md:grid-cols-1 xs:grid-cols-1 gap-[78px] md:gap-[20px] xs:gap-[14px]">
         <label
           htmlFor="email"
           className="relative flex items-center gap-[13px] "

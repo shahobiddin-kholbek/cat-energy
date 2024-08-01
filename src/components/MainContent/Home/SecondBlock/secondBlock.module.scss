@@ -8,7 +8,7 @@
                 'description description description'
                 'catalog catalog catalog';
             gap: 10px;
-            height: 374px;
+            // height: 374px;
 
             .icon {
                 grid-area: icon;
@@ -33,7 +33,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 376px) and (max-width: 768px) {
     .section {
         .ul {
             .li {
@@ -41,6 +41,19 @@
                     'title icon icon'
                     'description icon icon'
                     'catalog icon icon';
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .section {
+        .ul {
+            .li {
+                grid-template-areas:
+                    'icon title '
+                    'description '
+                    'catalog ';
             }
         }
     }

@@ -52,13 +52,13 @@ export default function ProgramSelect() {
   };
 
 
-  return (
-    <section className="pt-[187px] pb-[82px]">
-      <div className="px-[110px] md:px-[70px]">
-        <h1 className="pb-[56px] text-[60px] leading-[60px] font-normal text-black">
+  return ( 
+    <section className="pt-[187px] xs:pt-[27px] pb-[82px] md:pb-[72px] xs:pb-[32px]">
+      <div className="px-[110px] xs:px-[20px] md:px-[70px]">
+        <h1 className="pb-[56px] xs:pb-[37px] text-[60px] xs:text-[36px] leading-[60px] xs:leading-[36px] font-normal text-black">
           Подбор программы
         </h1>
-        <p className="uppercase w-[323px] pb-[66px] text-[20px] leading-[30px] font-normal text-black">
+        <p className="uppercase w-[323px] xs:w-[226px] pb-[66px] xs:pb-[39px] text-[20px] xs:text-[14px] leading-[30px] xs:leading-[18px] font-normal text-black">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
       </div>
@@ -67,11 +67,11 @@ export default function ProgramSelect() {
         <Contacts contacts={contacts} setContacts={setContacts} />
         <Comment comment={comment} setComment={setComment} />
         <Additionally additional={additional} setAdditional={setAdditional} />
-        <div className="grid grid-cols-2 items-center gap-[81px] px-[110px] md:px-[70px]">
-          <button className="uppercase py-[14px] hover:opacity-90 text-white bg-[#68B738]">
+        <div className="grid grid-cols-2 xs:grid-cols-1 items-center  gap-[81px] xs:gap-[21px] px-[110px] xs:px-[20px] md:px-[70px]">
+          <button className="uppercase  py-[14px] hover:opacity-90 text-white bg-[#68B738]">
             отправить заявку
           </button>
-          <p className="text-black text-[16px] leading-4">* — Обязательные поля</p>
+          <p className="text-black text-[16px] xs:text-center leading-4">* — Обязательные поля</p>
         </div>
       </form>
       <PetInfoModal isOpen={isModalOpen} onClose={handleCloseModal} data={formData} />

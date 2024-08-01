@@ -24,22 +24,23 @@ const weightLossGainDataes = [
   },
 ];
 
+
 export default function SecondBlock() {
   return (
-    <section className={`${styles.section} px-[110px] md:px-[30px] mt-[82px] md:mt-[140px]`}>
-      <ul className={`${styles.ul} flex md:flex-col justify-between gap-[80px] md:gap-[30px]`}>
+    <section className={`${styles.section} px-[110px] md:px-[30px] xs:px-[20px] mt-[82px] xs:mt-[22px] md:mt-[140px]`}>
+      <ul className={`${styles.ul} flex md:flex-col xs:flex-col justify-between gap-[80px] md:gap-[30px] xs:gap-[20px]`}>
         {weightLossGainDataes.map((item) => (
           <li
-            className={`${styles.li} pt-[41px] pb-[55px] md:pb-[53px] px-[52px] bg-[#F2F2F2] h-[374px]`}
+            className={`${styles.li} pt-[41px] xs:pt-[21px] pb-[55px] xs:pb-[18px] md:pb-[53px] px-[52px] xs:px-[20px] bg-[#F2F2F2] h-[374px] xs:h-auto`}
             key={item.id}
           >
             <div className={`${styles.icon}`}>{item.icon}</div>
             <h1
-              className={`${styles.title} text-[36px] leading-[36px] font-normal`}
+              className={`${styles.title} text-[36px] xs:text-[24px] xs:leading-[37px] leading-[36px] font-normal`}
             >
               {item.title}
             </h1>
-            <p className={`${styles.description} w-[467px] md:w-[340px]  font-sans`}>
+            <p className={`${styles.description} w-[467px] text-[#444444] xs:text-[14px] xs:w-auto md:w-[340px] font-sans`}>
               {item.description}
             </p>
             <Link

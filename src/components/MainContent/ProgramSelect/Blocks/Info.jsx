@@ -19,11 +19,11 @@ export default function Info({ petInfo, setPetInfo }) {
   };
 
   return (
-    <div className="pb-[69px] px-[110px] md:px-[71px] grid grid-cols-2 md:grid-cols-1 gap-[80px]">
-      <div className="flex flex-col gap-[20px]">
-        <label className="flex items-center gap-[13px]" htmlFor="name">
+    <div className="pb-[69px] xs:pb-[18px] px-[110px] xs:px-0 md:px-[71px] grid grid-cols-2 md:grid-cols-1 xs:grid-cols-1 gap-[80px] xs:gap-0">
+      <div className="flex flex-col gap-[20px] xs:pb-[24px] xs:border-b border-[#D9D9D9]">
+        <label className="xs:px-[20px] flex items-center gap-[13px]" htmlFor="name">
           <p className="uppercase whitespace-nowrap text-[20px] leading-[30px] font-normal text-black">
-            Имя:*
+            Имя:* 
           </p>
           <input
             className="w-full h-[52px] border border-[#E7E7E7] pl-[13px] outline-none"
@@ -36,7 +36,7 @@ export default function Info({ petInfo, setPetInfo }) {
             placeholder="Имя"
           />
         </label>
-        <label className="flex items-center gap-[13px]" htmlFor="weight">
+        <label className="xs:px-[20px] flex items-center gap-[13px]" htmlFor="weight">
           <p className="uppercase whitespace-nowrap text-[20px] leading-[30px] font-normal text-black">
             Вес (кг):*
           </p>
@@ -51,7 +51,7 @@ export default function Info({ petInfo, setPetInfo }) {
             placeholder="Вес"
           />
         </label>
-        <label className="flex items-center gap-[13px]" htmlFor="age">
+        <label className="xs:px-[20px] flex items-center gap-[13px]" htmlFor="age">
           <p className="uppercase whitespace-nowrap text-[20px] leading-[30px] font-normal text-black">
             Возраст (лет):
           </p>
@@ -66,7 +66,7 @@ export default function Info({ petInfo, setPetInfo }) {
           />
         </label>
       </div>
-      <div className="border flex flex-col gap-[13px] pt-[25px] pl-[28px] border-[#E7E7E7] ">
+      <div className="border flex flex-col gap-[13px] pt-[22px] pl-[28px] xs:pl-[20px] border-[#E7E7E7] ">
         <label className="flex items-center gap-[13px]" htmlFor="Похудение">
           <input
             checked={selectedOption === "Похудение"}

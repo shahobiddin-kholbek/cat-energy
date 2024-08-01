@@ -1,25 +1,22 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import mapFoto from "../../../../assets/img/map.png";
 import mark from "../../../../assets/img/mark.png";
 
 export default function FivesBlock() {
   const [showAddress, setShowAddress] = useState(false);
-  const addressRef = useRef(null); // Ссылка на элемент с адресом
+  const addressRef = useRef(null); 
 
-  useEffect(() => {
-    // Функция для обработки кликов вне элемента
-    const handleClickOutside = (event) => {
-      if (addressRef.current && !addressRef.current.contains(event.target) && !event.target.matches('.addressBlock')) {
-        setShowAddress(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (addressRef.current && !addressRef.current.contains(event.target) && !event.target.matches('.addressBlock')) {
+  //       setShowAddress(false);
+  //     }
+  //   };
 
-    // Добавляем обработчик кликов
-    document.addEventListener("mousedown", handleClickOutside);
+  //   document.addEventListener("mousedown", handleClickOutside);
 
-    // Удаляем обработчик при размонтировании компонента
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  //   return () => document.removeEventListener("mousedown", handleClickOutside);
+  // }, []);
 
   return (
     <section className="relative">
